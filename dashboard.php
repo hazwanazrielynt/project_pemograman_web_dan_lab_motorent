@@ -1,14 +1,14 @@
 <?php
 include 'koneksi.php';
 
-$query_batam_center = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Batam center'");
+$query_batam_center = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Batam Center'");
 $data_batam_center = mysqli_fetch_assoc($query_batam_center);
-
-$query_baloi = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Baloi'");
-$data_baloi = mysqli_fetch_assoc($query_baloi);
 
 $query_lubuk_baja = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Lubuk Baja'");
 $data_lubuk_baja = mysqli_fetch_assoc($query_lubuk_baja);
+
+$query_batu_aji = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Batu Aji'");
+$data_batu_aji = mysqli_fetch_assoc($query_batu_aji);
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ $data_lubuk_baja = mysqli_fetch_assoc($query_lubuk_baja);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MotoRent Dashboard</title>
+  <title>HomeRent Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
@@ -62,12 +62,12 @@ $data_lubuk_baja = mysqli_fetch_assoc($query_lubuk_baja);
             <span><?= $data_batam_center['total']; ?></span>
           </div>
           <div class="motor-card">
-            <p>BALOI</p>
-            <span><?= $data_baloi['total']; ?></span>
-          </div>
-          <div class="motor-card">
             <p>LUBUK BAJA</p>
             <span><?= $data_lubuk_baja['total']; ?></span>
+          </div>
+          <div class="motor-card">
+            <p>BATU AJI</p>
+            <span><?= $data_batu_aji['total']; ?></span>
           </div>
         </div>
       </section>

@@ -1,14 +1,14 @@
 <?php
 include 'koneksi.php';
 
-$query_batam_center = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Batam center'");
+$query_batam_center = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Batam Center'");
 $data_batam_center = mysqli_fetch_assoc($query_batam_center);
-
-$query_baloi = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Baloi'");
-$data_baloi = mysqli_fetch_assoc($query_baloi);
 
 $query_lubuk_baja = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Lubuk Baja'");
 $data_lubuk_baja = mysqli_fetch_assoc($query_lubuk_baja);
+
+$query_batu_aji = mysqli_query($conn, "SELECT COUNT(*) AS total FROM rumah WHERE wilayah='Batu Aji'");
+$data_batu_aji = mysqli_fetch_assoc($query_batu_aji);
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +25,9 @@ $data_lubuk_baja = mysqli_fetch_assoc($query_lubuk_baja);
       <ul>
         <li class="active">Dashboard Admin </li>
         <li><a href="data_rumah_admin.php">Data Rumah</a></li>
+        <li><a href="data_transaksi_admin.php">Data Transaksi</a></li>
+        <li><a href="data_pelanggan.php">Data Pelanggan</a></li>
+        <li><a href="data_admin.php">Data Admin</a></li>
       </ul>
     </aside>
     <main class="main-content">
@@ -56,12 +59,12 @@ $data_lubuk_baja = mysqli_fetch_assoc($query_lubuk_baja);
             <span><?= $data_batam_center['total']; ?></span>
           </div>
           <div class="motor-card">
-            <p>BALOI</p>
-            <span><?= $data_baloi['total']; ?></span>
-          </div>
-          <div class="motor-card">
             <p>LUBUK BAJA</p>
             <span><?= $data_lubuk_baja['total']; ?></span>
+          </div>
+          <div class="motor-card">
+            <p>BATU AJI</p>
+            <span><?= $data_batu_aji['total']; ?></span>
           </div>
         </div>
       </section>
