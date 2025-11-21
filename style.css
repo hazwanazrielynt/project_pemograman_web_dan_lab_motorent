@@ -3,44 +3,13 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #F4F6FA; 
   margin: 0;
-}
-
-/*layout 3 Kolom */
+} 
 .layout {
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  height: 100vh;
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: 1fr 250px; /* tengah besar, sidebar kecil */
+  gap: 20px;
+  padding: 20px;
 }
-
-/*Sidebar Kiri */
-.sidebar-left {
-  background-color: #d9d9d9; 
-  border-radius: 20px;
-  padding-top: 40px;
-}
-
-.sidebar-left ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-left li {
-  padding: 12px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  color: #333;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.sidebar-left li:hover,
-.sidebar-left li.active {
-  background-color: #bcbcbc;
-}
-
 /*konten di tengah */
 .main-content {
   background-color: #f5f5f5;
@@ -49,7 +18,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 /*header atas */
 .header {
   display: flex;
@@ -62,13 +30,12 @@ body {
   border-radius: 15px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-
 .header h2 {
   font-size: 18px;
   margin: 0;
   color: #222; 
+  font-weight: bold;
 }
-
 .datetime {
   background-color: #89b4f8; 
   color: #fff;
@@ -77,22 +44,25 @@ body {
   padding: 8px 16px;
   font-size: 13px;
 }
-
 /*konten utama*/
 .content-box {
   background-color: #d9d9d9; 
   border-radius: 20px;
   padding: 25px;
-  width: 80%;
+  width: 90%;
   margin-top: 25px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 .content-box h2 {
   margin-top: 0;
   color: #222; 
+  font-weight: bold;
 }
-
+.content-box h3 {
+  margin-top: 0;
+  color: #222; 
+  font-weight: bold;
+}
 .content-box p {
   font-size: 14px;
   color: #444;
@@ -112,11 +82,9 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .btn:hover {
   background-color: #006be0;
 }
-
 /* grid motor */
 .motor-grid {
   display: flex;
@@ -125,7 +93,6 @@ body {
   flex-wrap: wrap;
   gap: 15px;
 }
-
 .motor-card {
   background-color: white;
   width: 30%;
@@ -141,26 +108,22 @@ body {
   color: #444;
   margin-bottom: 8px;
 }
-
 .motor-card span {
   font-size: 26px;
   font-weight: bold;
   color: #1E90FF; 
 }
-
 /* sidebar kanan */
 .sidebar-right {
   background-color: #d9d9d9; 
   border-radius: 20px;
   padding: 20px;
 }
-
 .sidebar-right h3 {
   margin-top: 0;
   text-align: center;
   font-weight: bold;
 }
-
 .promo-box {
   background-color: #bcbcbc;
   border-radius: 12px;
@@ -171,15 +134,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .promo-box img {
   width: 100%;
   height: 100%;
   object-fit: cover; 
   border-radius: 12px;
 }
-
-
 /* layar responsif */
 @media (max-width: 900px) {
   .layout {
@@ -196,7 +156,6 @@ body {
     width: 45%;
   }
 }
-
 @media (max-width: 600px) {
   .motor-card {
     width: 100%;
